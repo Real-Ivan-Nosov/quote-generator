@@ -108,4 +108,8 @@ button:active {
   .quote-text {
     font-size: 2.0rem;
   }
+
+  button {
+    font-size: 0.8rem;
+  }
 }
