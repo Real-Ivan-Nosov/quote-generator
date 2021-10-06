@@ -41,7 +41,6 @@ body {
 }
 
 .quote-container {
-  max-width: 900px;
   padding: 20px 30px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -116,8 +115,11 @@ button:active {
 /* Media query: Tablet or Smaller */
 
 @media screen and (max-width: 1000px){
-  .quote-container {
-    margin: auto 10px;
+
+  .container {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
   }
 
   .quote-text {
