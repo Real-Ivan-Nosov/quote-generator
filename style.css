@@ -138,3 +138,9 @@ button:active {
     font-size: 10px;
   }
 }
+
+@media (max-device-width: 1080px) {
+  html {
+    font-size: 15px;
+  }
+}

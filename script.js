@@ -21,7 +21,6 @@ const createNewQuote = (quotesArray) => {
     }
 
     quoteText.textContent = quote.text;
-    console.log(quote)
 }
 
 const changeBackground = () => {
