@@ -22,7 +22,7 @@ body {
 .container {
   width: 80%;
   max-width: 900px;
-  
+
   display: flex;
   flex-direction: column;
   padding: 20px 30px;
@@ -42,13 +42,13 @@ body {
 }
 
 .quote-container {
+
   padding: 20px 30px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
 }
 
 .quote-text {
@@ -71,11 +71,11 @@ body {
 }
 
 .button-container {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 button {
@@ -93,7 +93,8 @@ button {
 }
 
 
-.current-quotes, #new-quote {
+.current-quotes,
+#new-quote {
   height: auto;
 }
 
@@ -116,28 +117,24 @@ button:active {
 
 /* Media query: Tablet or Smaller */
 
-@media screen and (max-width: 1200px){
-
+@media (max-width: 1200px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
-
   .container {
     margin-left: 10px;
     margin-bottom: 10px;
   }
-
-  /* .quote-text {
-    font-size: 2.0rem;
-  }
-
-  button {
-    font-size: 1.2rem;
-  } */
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 10px;
   }
 }
