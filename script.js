@@ -1,10 +1,10 @@
 const quoteContainer = document.querySelector('#quote-container');
 const body = document.querySelector('#body');
-const quoteText = quoteContainer.querySelector('#quote');
-const authorText = quoteContainer.querySelector('#author');
-const twitterBtn = quoteContainer.querySelector('#twitter');
-const currentQuotesBtn = quoteContainer.querySelector('#current-quotes');
-const newQuoteBtn = quoteContainer.querySelector('#new-quote');
+const quoteText = document.querySelector('#quote');
+const authorText = document.querySelector('#author');
+const twitterBtn = document.querySelector('#twitter');
+const currentQuotesBtn = document.querySelector('#current-quotes');
+const newQuoteBtn = document.querySelector('#new-quote');
 
 // Show New Quote
 const createNewQuote = (quotesArray) => {
