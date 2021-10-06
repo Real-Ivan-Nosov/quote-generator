@@ -1,13 +1,29 @@
 const quoteContainer = document.querySelector('#quote-container');
 const body = document.querySelector('#body');
+const container = document.querySelector('#container');
+const buttonContainer = document.querySelector('.button-container');
 const quoteText = document.querySelector('#quote');
 const authorText = document.querySelector('#author');
 const twitterBtn = document.querySelector('#twitter');
 const currentQuotesBtn = document.querySelector('#current-quotes');
 const newQuoteBtn = document.querySelector('#new-quote');
+const loader = document.querySelector('#loader');
+
+// Show loading
+function loading() {
+    loader.classList.remove('visually-hidden');
+    container.classList.add('visually-hidden'); 
+}
+
+// Hide loading
+function complete() {
+    loader.classList.add('visually-hidden');
+    container.classList.remove('visually-hidden');
+}
 
 // Show New Quote
 const createNewQuote = (quotesArray) => {
+    loading();
     // Pick a random quote from apiQuotes array
     const quote = quotesArray[Math.floor(Math.random() * quotesArray.length)];
     if (!quote.author) {
@@ -19,8 +35,9 @@ const createNewQuote = (quotesArray) => {
     } else {
         quoteText.classList.remove('long-quote');
     }
-
+    // Set Quote, Hide Loader
     quoteText.textContent = quote.text;
+    complete();
 }
 
 const changeBackground = () => {
@@ -41,6 +58,7 @@ const checkMode = () => {
 let apiServerQuotes = [];
 
 async function getQuotes() {
+    loading();
     const apiUrl = 'https://type.fit/api/quotes';
     try {
         const response = await fetch(apiUrl);

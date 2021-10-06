@@ -6,35 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генератор мысли</title>
     <link rel="icon" type="image/png" href="y.png">
-    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="back-ver-1" id="body">
-    <div class="container">
-    <!-- buttons -->
-    <div class="button-container">
-            <script type="text/javascript"><!--
-                document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
-                --></script>
-            <!-- <button class="twitter-button" id="twitter" title="Twit this!">
-                <i class="fab fa-twitter"></i> -->
+    <div class="container" id="container">
+        <!-- buttons -->
+        <div class="button-container">
+            <script type="text/javascript"> 
+                document.write(VK.Share.button(false, {
+                    type: "custom",
+                    text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"
+                }));
+            </script>
             </button>
             <button class="current-quotes" id="current-quotes">Сменить на high IQ цитаты</button>
             <button id="new-quote">Новая цитата</button>
         </div>
-    <div class="quote-container" id="quote-container">
-        <!-- quote -->
-        <div class="quote-text">
-            <i class="fas fa-quote-left"></i>
-            <span id="quote"></span>
+        <div class="quote-container" id="quote-container">
+            <!-- quote -->
+            <div class="quote-text">
+                <i class="fas fa-quote-left"></i>
+                <span id="quote"></span>
+            </div>
+            <!-- author -->
+            <div class="quote-author">
+                <span id="author"></span>
+            </div>
+
         </div>
-        <!-- author -->
-        <div class="quote-author">
-            <span id="author"></span>
-        </div>
-        
     </div>
+    <!-- load -->
+    <div class="loader visually-hidden" id="loader">
+
     </div>
     <!-- Script -->
     <script src="quotes.js"></script>
